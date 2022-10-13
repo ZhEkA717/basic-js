@@ -17,11 +17,11 @@ const {
  *
  */
 function countCats(arr) {
-  const rez=[];
+  const rez = [];
 
   arr.forEach(item => {
-    item.forEach(item=>{
-      if(item==="^^"){
+    item.forEach(item => {
+      if (item === "^^") {
         rez.push(item);
       }
     });
