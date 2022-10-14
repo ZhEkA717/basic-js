@@ -21,25 +21,10 @@ const {
  * ]
  */
 function minesweeper(matrix) {
-  const res= [];
-  const m = matrix;
-  for(let i=0; i<m.length;i++){
-    for(let j=0; j<m[i].length;j++){
-      
-    }
-  }
-
-  console.log(matrixWithZero);
-
+  throw new NotImplementedError('Not implemented');
+  // remove line with error and write your code here
 }
 
-matrix = [
-  ["t", "f", "f"],
-  ["f", "t", "f"],
-  ["f", "f", "f"]
-]
-
-minesweeper(matrix);
 
 module.exports = {
   minesweeper
