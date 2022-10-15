@@ -21,10 +21,49 @@ const {
  * ]
  */
 function minesweeper(matrix) {
-  throw new NotImplementedError('Not implemented');
-  // remove line with error and write your code here
-}
+  let res = [];
+  let a = matrix;
 
+  function isValidPos(i, j, n, m) {
+    return (i < 0 || j < 0 || i > n - 1 || j > m - 1)?0:1;
+  }
+
+  for (let i = 0; i < matrix.length; i++) {
+    let arr = [];
+    let n = matrix.length;
+    for (let j = 0; j < matrix[i].length; j++) {
+      let m = matrix[i].length;
+      let count=0;
+      if(isValidPos(i-1,j-1,n,m) && a[i-1][j-1]){
+        count++;
+      }
+      if(isValidPos(i+1,j+1,n,m) && a[i+1][j+1]){
+        count++;
+      }
+      if(isValidPos(i,j+1,n,m) && a[i][j+1]){
+        count++;
+      }
+      if(isValidPos(i+1,j,n,m) && a[i+1][j]){
+        count++;
+      }
+      if(isValidPos(i-1,j,n,m) && a[i-1][j]){
+        count++;
+      }
+      if(isValidPos(i,j-1,n,m) && a[i][j-1]){
+        count++;
+      }
+      if(isValidPos(i-1,j+1,n,m) && a[i-1][j+1]){
+        count++;
+      }
+      if(isValidPos(i+1,j-1,n,m) && a[i+1][j-1]){
+        count++;
+      }
+      arr.push(count);
+    }
+    res.push(arr);
+  }
+  return res;
+}
 
 module.exports = {
   minesweeper
